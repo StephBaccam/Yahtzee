@@ -1,11 +1,15 @@
+using YahtzeeClasses;
+
 namespace Yahtzee
 {
-    public class UnitTest1
+    public class YahtzeeTests
     {
         [Fact]
-        public void Test1()
+        public void ReturnTrueIfFullHouse()
         {
-
+            var yahtzee = new YahtzeeClass();
+            var result = yahtzee.IsFullHouse(1, 2, 3, 4, 5);
+            Assert.False(result);
         }
     }
 }
