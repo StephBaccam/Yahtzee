@@ -16,7 +16,32 @@
             return resToReturn;
         }
 
-        public bool IsFullHouse(int roll1, int roll2, int roll3, int roll4, int roll5)
+        public bool IsThreeOfAKind(List<int> rolls)
+        {
+            return true;
+        }
+
+        public bool IsFourOfAKind(List<int> rolls)
+        {
+            return true;
+        }
+
+        public bool IsFullHouse(List<int> rolls)
+        {
+            return true;
+        }
+
+        public bool IsSmallStraight(List<int> rolls)
+        {
+            return true;
+        }
+
+        public bool IsLargeStraight(List<int> rolls)
+        {
+            return true;
+        }
+
+        public bool IsYahtzee(List<int> rolls)
         {
             return true;
         }
