@@ -25,7 +25,7 @@ namespace Yahtzee
                 1, 1, 2, 2, 3
             };
             var result = yahtzee.IsThreeOfAKind(rolls);
-            Assert.False(result);
+            Assert.True(result);
         }
 
         [Fact]
@@ -37,7 +37,7 @@ namespace Yahtzee
                 1, 1, 2, 2, 3
             };
             var result = yahtzee.IsFourOfAKind(rolls);
-            Assert.False(result);
+            Assert.True(result);
         }
 
         [Fact]
@@ -49,7 +49,7 @@ namespace Yahtzee
                 1, 1, 2, 2, 3
             };
             var result = yahtzee.IsFullHouse(rolls);
-            Assert.False(result);
+            Assert.True(result);
         }
 
         [Fact]
@@ -61,7 +61,7 @@ namespace Yahtzee
                 1, 1, 2, 2, 3
             };
             var result = yahtzee.IsSmallStraight(rolls);
-            Assert.False(result);
+            Assert.True(result);
         }
 
         [Fact]
@@ -73,7 +73,7 @@ namespace Yahtzee
                 1, 1, 2, 2, 3
             };
             var result = yahtzee.IsLargeStraight(rolls);
-            Assert.False(result);
+            Assert.True(result);
         }
 
         [Fact]
@@ -85,7 +85,7 @@ namespace Yahtzee
                 1, 1, 2, 2, 3
             };
             var result = yahtzee.IsYahtzee(rolls);
-            Assert.False(result);
+            Assert.True(result);
         }
     }
 }
