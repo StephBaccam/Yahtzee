@@ -10,7 +10,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 1, 6, 2, 5
+                1, 1, 6, 1, 5
             };
             var result = yahtzee.CountOnes(rolls);
             Assert.Equal(3, result);
@@ -22,7 +22,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 4, 3, 5, 2
+                1, 4, 2, 5, 2
             };
             var result = yahtzee.CountTwos(rolls);
             Assert.Equal(4, result);
@@ -34,7 +34,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 3, 3, 3, 2
+                1, 3, 3, 6, 2
             };
             var result = yahtzee.CountThrees(rolls);
             Assert.Equal(6, result);
@@ -46,7 +46,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                4, 1, 4, 6, 3
+                4, 1, 4, 4, 3
             };
             var result = yahtzee.CountFours(rolls);
             Assert.Equal(12, result);
@@ -58,19 +58,19 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                4, 6, 3, 2, 5
+                4, 6, 5, 2, 5
             };
             var result = yahtzee.CountFives(rolls);
             Assert.Equal(10, result);
         }
 
         [Fact]
-        public void ReturnCountSixesIs12Points()
+        public void ReturnCountSixesIs24Points()
         {
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                4, 6, 2, 6, 6
+                6, 6, 2, 6, 6
             };
             var result = yahtzee.CountSixes(rolls);
             Assert.Equal(24, result);
@@ -85,7 +85,7 @@ namespace Yahtzee
                 1, 4, 4, 6, 4
             };
             var result = yahtzee.Chance(rolls);
-            Assert.Equal(18, result);
+            Assert.Equal(19, result);
         }
 
         [Fact]
