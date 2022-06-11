@@ -7,12 +7,98 @@ namespace YahtzeeClasses
         public int CountOnes(List<int> rolls)
         {
             var resToReturn = 0;
-            foreach(var roll in rolls)
+            foreach (var roll in rolls)
             {
-                if(roll == 1)
+                if (roll == 1)
                 {
                     resToReturn += roll;
                 }
+            }
+
+            return resToReturn;
+        }
+
+        public int CountTwos(List<int> rolls)
+        {
+            var resToReturn = 0;
+            foreach (var roll in rolls)
+            {
+                if (roll == 2)
+                {
+                    resToReturn += roll;
+                }
+            }
+
+            return resToReturn;
+        }
+
+
+        public int CountThrees(List<int> rolls)
+        {
+            var resToReturn = 0;
+            foreach (var roll in rolls)
+            {
+                if (roll == 3)
+                {
+                    resToReturn += roll;
+                }
+            }
+
+            return resToReturn;
+        }
+
+        public int CountFours(List<int> rolls)
+        {
+            var resToReturn = 0;
+            foreach (var roll in rolls)
+            {
+                if (roll == 4)
+                {
+                    resToReturn += roll;
+                }
+            }
+
+            return resToReturn;
+        }
+
+        public int CountFives(List<int> rolls)
+        {
+            var resToReturn = 0;
+            foreach (var roll in rolls)
+            {
+                if (roll == 5)
+                {
+                    resToReturn += roll;
+                }
+            }
+
+            return resToReturn;
+        }
+
+        public int CountSixes(List<int> rolls)
+        {
+            var resToReturn = 0;
+            foreach (var roll in rolls)
+            {
+                if (roll == 6)
+                {
+                    resToReturn += roll;
+                }
+            }
+
+            return resToReturn;
+        }
+
+        public int Chance(List<int> rolls)
+        {
+            var resToReturn = 0;
+            foreach (var roll in rolls)
+            {
+                if (roll != roll)
+                {
+                    continue;
+                }
+                resToReturn += roll;
             }
 
             return resToReturn;

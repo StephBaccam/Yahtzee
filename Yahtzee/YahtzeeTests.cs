@@ -10,10 +10,82 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 1, 2, 2, 3
+                1, 1, 6, 2, 5
             };
             var result = yahtzee.CountOnes(rolls);
             Assert.Equal(3, result);
+        }
+
+        [Fact]
+        public void ReturnCountTwoIs4Points()
+        {
+            var yahtzee = new YahtzeeClass();
+            List<int> rolls = new List<int>()
+            {
+                1, 4, 3, 5, 2
+            };
+            var result = yahtzee.CountTwos(rolls);
+            Assert.Equal(4, result);
+        }
+
+        [Fact]
+        public void ReturnCountThreesIs6Points()
+        {
+            var yahtzee = new YahtzeeClass();
+            List<int> rolls = new List<int>()
+            {
+                1, 3, 3, 3, 2
+            };
+            var result = yahtzee.CountThrees(rolls);
+            Assert.Equal(6, result);
+        }
+
+        [Fact]
+        public void ReturnCountFoursIs12Points()
+        {
+            var yahtzee = new YahtzeeClass();
+            List<int> rolls = new List<int>()
+            {
+                4, 1, 4, 6, 3
+            };
+            var result = yahtzee.CountFours(rolls);
+            Assert.Equal(12, result);
+        }
+
+        [Fact]
+        public void ReturnCountFivesIs10Points()
+        {
+            var yahtzee = new YahtzeeClass();
+            List<int> rolls = new List<int>()
+            {
+                4, 6, 3, 2, 5
+            };
+            var result = yahtzee.CountFives(rolls);
+            Assert.Equal(10, result);
+        }
+
+        [Fact]
+        public void ReturnCountSixesIs12Points()
+        {
+            var yahtzee = new YahtzeeClass();
+            List<int> rolls = new List<int>()
+            {
+                4, 6, 2, 6, 6
+            };
+            var result = yahtzee.CountSixes(rolls);
+            Assert.Equal(24, result);
+        }
+
+        [Fact]
+        public void ReturnCountChancePoints()
+        {
+            var yahtzee = new YahtzeeClass();
+            List<int> rolls = new List<int>()
+            {
+                1, 4, 4, 6, 4
+            };
+            var result = yahtzee.Chance(rolls);
+            Assert.Equal(18, result);
         }
 
         [Fact]
