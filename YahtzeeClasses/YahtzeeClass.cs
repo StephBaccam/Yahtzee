@@ -180,12 +180,50 @@ namespace YahtzeeClasses
 
         public bool IsSmallStraight(List<int> rolls)
         {
-            return true;
+            var straightLength = 1;
+            rolls.Sort();
+            var uniqueRolls = rolls.Distinct();
+
+            foreach (var roll in uniqueRolls)
+            {
+                if (rolls.Contains(roll + 1))
+                {
+                    straightLength++;
+                }
+            }
+
+            if (straightLength == 4)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool IsLargeStraight(List<int> rolls)
         {
-            return true;
+            var straightLength = 1;
+            rolls.Sort();
+            var uniqueRolls = rolls.Distinct();
+
+            foreach (var roll in uniqueRolls)
+            {
+                if (rolls.Contains(roll + 1))
+                {
+                    straightLength++;
+                }
+            }
+
+            if (straightLength == 5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool IsYahtzee(List<int> rolls)

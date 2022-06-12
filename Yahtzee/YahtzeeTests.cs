@@ -107,7 +107,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 1, 2, 2, 3
+                1, 4, 2, 2, 2
             };
             var result = yahtzee.IsThreeOfAKind(rolls);
             Assert.True(result);
@@ -119,7 +119,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 1, 2, 2, 3
+                1, 2, 2, 2, 2
             };
             var result = yahtzee.IsFourOfAKind(rolls);
             Assert.True(result);
@@ -131,7 +131,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 1, 2, 2, 3
+                1, 1, 2, 2, 2
             };
             var result = yahtzee.IsFullHouse(rolls);
             Assert.True(result);
@@ -143,7 +143,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 1, 2, 2, 3
+                1, 1, 2, 4, 3
             };
             var result = yahtzee.IsSmallStraight(rolls);
             Assert.True(result);
@@ -155,7 +155,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 1, 2, 2, 3
+                1, 5, 2, 4, 3
             };
             var result = yahtzee.IsLargeStraight(rolls);
             Assert.True(result);
@@ -167,7 +167,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 1, 2, 2, 3
+                1, 1, 1, 1, 1
             };
             var result = yahtzee.IsYahtzee(rolls);
             Assert.True(result);
