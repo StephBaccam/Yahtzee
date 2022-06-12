@@ -4,6 +4,13 @@ namespace YahtzeeClasses
 {
     public class YahtzeeClass
     {
+        Dictionary<string, int> Combinations = new Dictionary<string, int>()
+        {
+            {"Pair", 2 },
+            {"Three of a Kind", 3 },
+            {"Four of a Kind", 4 },
+            {"Yahtzee", 5 },
+        };
         public int CountOnes(List<int> rolls)
         {
             var resToReturn = 0;
@@ -144,7 +151,7 @@ namespace YahtzeeClasses
             }
         }
 
-        public bool IsSmallStraight(List<int> rolls)
+        public int ScoreStraight(List<int> rolls)
         {
             var straightLength = 1;
             rolls.Sort();
@@ -160,49 +167,50 @@ namespace YahtzeeClasses
 
             if (straightLength == 4)
             {
-                return true;
+                return 30;
+            }
+            else if (straightLength == 5)
+            {
+                return 40;
             }
             else
             {
-                return false;
+                return 0;
             }
         }
 
-        public bool IsLargeStraight(List<int> rolls)
+        public int ScoreCombination(List<int> rolls)
         {
-            var straightLength = 1;
-            rolls.Sort();
-            var uniqueRolls = rolls.Distinct();
-
-            foreach (var roll in uniqueRolls)
+            var pairDetected = false;
+            foreach(var combination in Combinations)
             {
-                if (rolls.Contains(roll + 1))
+                var req = rolls.GroupBy(roll => roll).Where(roll => roll.Count() == combination.Value).ToList();
+                if (req.Any())
                 {
-                    straightLength++;
+                    switch(combination.Key)
+                    {
+                        case "Pair":
+                            pairDetected = true;
+                            break;
+                        case "Three of a Kind":
+                            if(pairDetected)
+                            {
+                                return 25;
+                            }
+                            else
+                            {
+                                return rolls.Sum();
+                            }
+                        case "Four of a Kind":
+                            return rolls.Sum();
+                        case "Yahtzee":
+                            return 50;
+                        default:
+                            return 0;
+                    }
                 }
             }
-
-            if (straightLength == 5)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public bool IsYahtzee(List<int> rolls)
-        {
-            var req = rolls.GroupBy(roll => roll).Where(roll => roll.Count() == 5).ToList();
-            if (req.Any())
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return 0;
         }
     }
 }

@@ -89,27 +89,27 @@ namespace Yahtzee
         }
 
         [Fact]
-        public void ReturnTrueIfThreeOfAKind()
+        public void Return_Sum_points_three_of_a_kind()
         {
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 4, 2, 2, 2
+                1, 4, 2, 5, 2
             };
-            var result = yahtzee.IsThreeOfAKind(rolls);
-            Assert.True(result);
+            var result = yahtzee.ScoreCombination(rolls);
+            Assert.Equal(rolls.Sum(), result);
         }
 
         [Fact]
-        public void ReturnTrueIfFourOfAKind()
+        public void Return_Sum_points_four_of_a_kind()
         {
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 2, 2, 2, 2
+                1, 2, 2, 5, 3
             };
-            var result = yahtzee.IsFourOfAKind(rolls);
-            Assert.True(result);
+            var result = yahtzee.ScoreCombination(rolls);
+            Assert.Equal(rolls.Sum(), result);
         }
 
         [Fact]
@@ -125,39 +125,51 @@ namespace Yahtzee
         }
 
         [Fact]
-        public void ReturnTrueIfSmallStraight()
+        public void Return_25_points_Full_House()
         {
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 1, 2, 4, 3
+                1, 1, 2, 2, 5
             };
-            var result = yahtzee.IsSmallStraight(rolls);
-            Assert.True(result);
+            var result = yahtzee.ScoreCombination(rolls);
+            Assert.Equal(25, result);
         }
 
         [Fact]
-        public void ReturnTrueIfLargeStraight()
+        public void Return_30_points_small_straight()
         {
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 5, 2, 4, 3
+                1, 1, 2, 5, 3
             };
-            var result = yahtzee.IsLargeStraight(rolls);
-            Assert.True(result);
+            var result = yahtzee.ScoreStraight(rolls);
+            Assert.Equal(30, result);
         }
 
         [Fact]
-        public void ReturnTrueIfYahtzee()
+        public void Return_40_points_large_straight()
         {
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 1, 1, 1, 1
+                1, 6, 2, 4, 3
             };
-            var result = yahtzee.IsYahtzee(rolls);
-            Assert.True(result);
+            var result = yahtzee.ScoreStraight(rolls);
+            Assert.Equal(40, result);
+        }
+
+        [Fact]
+        public void Return_50_points_Yahtzee()
+        {
+            var yahtzee = new YahtzeeClass();
+            List<int> rolls = new List<int>()
+            {
+                6, 6, 6, 6, 5
+            };
+            var result = yahtzee.ScoreCombination(rolls);
+            Assert.Equal(50, result);
         }
     }
 }
