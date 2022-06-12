@@ -4,18 +4,6 @@ namespace Yahtzee
 {
     public class YahtzeeTests
     {
-        //[Theory]
-        //[InlineData(1)]
-        //public void ReturnCountOnesIs3Points(List<int> rolls)
-        //{
-        //    var yahtzee = new YahtzeeClass();
-        //    List<int> rolls = new List<int>()
-        //    {
-        //        1, 4, 2, 5, 2
-        //    };
-        //    var result = yahtzee.Count(rolls);
-        //    Assert.Equal(1, result);
-        //}
 
         [Fact]
         public void ReturnCountOnesIs3Points()
@@ -23,9 +11,9 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 1, 6, 1, 5
+                1, 1, 1, 6, 4
             };
-            var result = yahtzee.CountOnes(rolls);
+            var result = yahtzee.Count(rolls, "Face1");
             Assert.Equal(3, result);
         }
 
@@ -37,7 +25,7 @@ namespace Yahtzee
             {
                 1, 4, 2, 5, 2
             };
-            var result = yahtzee.CountTwos(rolls);
+            var result = yahtzee.Count(rolls, "Face2");
             Assert.Equal(4, result);
         }
 
@@ -49,7 +37,7 @@ namespace Yahtzee
             {
                 1, 3, 3, 6, 2
             };
-            var result = yahtzee.CountThrees(rolls);
+            var result = yahtzee.Count(rolls, "Face3");
             Assert.Equal(6, result);
         }
 
@@ -61,7 +49,7 @@ namespace Yahtzee
             {
                 4, 1, 4, 4, 3
             };
-            var result = yahtzee.CountFours(rolls);
+            var result = yahtzee.Count(rolls, "Face4");
             Assert.Equal(12, result);
         }
 
@@ -71,9 +59,9 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                4, 6, 5, 2, 5
+                1, 6, 5, 2, 5
             };
-            var result = yahtzee.CountFives(rolls);
+            var result = yahtzee.Count(rolls, "Face5");
             Assert.Equal(10, result);
         }
 
@@ -85,7 +73,7 @@ namespace Yahtzee
             {
                 6, 6, 2, 6, 6
             };
-            var result = yahtzee.CountSixes(rolls);
+            var result = yahtzee.Count(rolls, "Face6");
             Assert.Equal(24, result);
         }
 
