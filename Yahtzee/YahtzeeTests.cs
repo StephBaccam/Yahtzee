@@ -107,7 +107,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 4, 2, 5, 2
+                1, 4, 2, 2, 2
             };
             var result = yahtzee.ScoreCombination(rolls);
             Assert.Equal(rolls.Sum(), result);
@@ -119,7 +119,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 2, 2, 5, 3
+                1, 2, 2, 2, 2
             };
             var result = yahtzee.ScoreCombination(rolls);
             Assert.Equal(rolls.Sum(), result);
@@ -131,7 +131,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 1, 2, 2, 5
+                1, 1, 2, 2, 1
             };
             var result = yahtzee.ScoreCombination(rolls);
             Assert.Equal(25, result);
@@ -143,7 +143,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 1, 2, 5, 3
+                1, 1, 2, 4, 3
             };
             var result = yahtzee.ScoreStraight(rolls);
             Assert.Equal(30, result);
@@ -155,7 +155,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                1, 6, 2, 4, 3
+                1, 5, 2, 4, 3
             };
             var result = yahtzee.ScoreStraight(rolls);
             Assert.Equal(40, result);
@@ -167,7 +167,7 @@ namespace Yahtzee
             var yahtzee = new YahtzeeClass();
             List<int> rolls = new List<int>()
             {
-                6, 6, 6, 6, 5
+                6, 6, 6, 6, 6
             };
             var result = yahtzee.ScoreCombination(rolls);
             Assert.Equal(50, result);
