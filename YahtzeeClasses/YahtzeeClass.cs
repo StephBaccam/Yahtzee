@@ -4,6 +4,40 @@ namespace YahtzeeClasses
 {
     public class YahtzeeClass
     {
+        //Dictionary<string, List<int>> CountValues = new Dictionary<string, List<int>>()
+        //{
+        //    { "Roll1", new List<int>(){ 1,2,3,4,5,6 } },
+        //    //{"Face1", 1},
+        //    //{"Face2", 2},
+        //    //{"Face3", 3},
+        //    //{"Face4", 4},
+        //    //{"Face5", 5},
+        //    //{"Face6", 6},
+
+        //};
+        //public string Count(int rolls)
+        //{
+        //    var resToReturn = 0;
+        //    //foreach (var roll in rolls)
+        //    //{
+        //    //    if (roll == 1)
+        //    //    {
+        //    //        resToReturn += roll;
+        //    //    }
+        //    //}
+
+        //    foreach (var roll in CountValues)
+        //    {
+        //        if (rolls == 1)
+        //        {
+        //            continue;
+        //        }
+        //        resToReturn += rolls;
+        //    }
+
+        //    return "";
+        //}
+
         Dictionary<string, int> Combinations = new Dictionary<string, int>()
         {
             {"Pair", 2 },

@@ -4,6 +4,19 @@ namespace Yahtzee
 {
     public class YahtzeeTests
     {
+        //[Theory]
+        //[InlineData(1)]
+        //public void ReturnCountOnesIs3Points(List<int> rolls)
+        //{
+        //    var yahtzee = new YahtzeeClass();
+        //    List<int> rolls = new List<int>()
+        //    {
+        //        1, 4, 2, 5, 2
+        //    };
+        //    var result = yahtzee.Count(rolls);
+        //    Assert.Equal(1, result);
+        //}
+
         [Fact]
         public void ReturnCountOnesIs3Points()
         {
