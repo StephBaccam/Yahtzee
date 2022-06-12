@@ -113,18 +113,6 @@ namespace Yahtzee
         }
 
         [Fact]
-        public void ReturnTrueIfFullHouse()
-        {
-            var yahtzee = new YahtzeeClass();
-            List<int> rolls = new List<int>()
-            {
-                1, 1, 2, 2, 2
-            };
-            var result = yahtzee.IsFullHouse(rolls);
-            Assert.True(result);
-        }
-
-        [Fact]
         public void Return_25_points_Full_House()
         {
             var yahtzee = new YahtzeeClass();
